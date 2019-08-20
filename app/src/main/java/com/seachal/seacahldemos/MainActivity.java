@@ -7,6 +7,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ * 一个用于验证，不同尺寸的图片，放在不同的资源文件夹（drawable）下， 加载出来会有什么效果差别。
+ *
+ * 缺少，相同尺寸的图片，放在不同的资源文件夹（drawable）下,会有什么差别
+ */
 public class MainActivity extends AppCompatActivity {
 
 

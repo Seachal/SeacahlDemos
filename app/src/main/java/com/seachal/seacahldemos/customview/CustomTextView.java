@@ -1,4 +1,4 @@
-package com.seachal.seacahldemos;
+package com.seachal.seacahldemos.customview;
 
 import android.content.Context;
 import android.graphics.Canvas;

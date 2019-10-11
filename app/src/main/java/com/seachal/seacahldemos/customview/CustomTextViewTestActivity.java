@@ -1,9 +1,11 @@
-package com.seachal.seacahldemos;
+package com.seachal.seacahldemos.customview;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+
+import com.seachal.seacahldemos.R;
 
 public class CustomTextViewTestActivity extends AppCompatActivity {
 

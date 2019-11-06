@@ -33,6 +33,11 @@
 
         <activity android:name=".TextView.LinkTextViewActivity" />
         <activity android:name=".RecyclerViewTest.RecyclerViewTestActivity"/>
+
+        <activity android:name=".Activity.CountDownTimerActivity"/>
+        <activity android:name=".Activity.URITestActivity"/>
+
+
     </application>
 
 </manifest>

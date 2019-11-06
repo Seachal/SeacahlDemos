@@ -1,1 +1,1 @@
-include ':app', ':LaunchOtherApp', ':LaunchedApp'
+include ':app', ':LaunchOtherApp', ':LaunchedApp',':X5WebDemo'

@@ -18,12 +18,16 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Main2Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+
+<!--        启动方 使用包名加类路径启动-->
+        <activity android:name=".Main2Activity" android:exported="true">
+
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN"/>-->
+<!--                <category android:name="android.intent.category.LAUNCHER"/>-->
+<!--            </intent-filter>-->
         </activity>
+<!-- 3       -->
         <activity android:name=".Main3Activity">
             <intent-filter>
                 <action android:name="com.example.seachal.launchedapp.app"/>
@@ -36,7 +40,7 @@
                     android:scheme="app"/>
             </intent-filter>
         </activity>
-
+<!-- 4 -->
         <activity android:name=".Main4Activity">
         </activity>
     </application>

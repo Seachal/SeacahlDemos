@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.seachal.seacahldemos.Activity.CountDownTimerActivity;
+import com.seachal.seacahldemos.Activity.URITestActivity;
 import com.seachal.seacahldemos.BitmapDip.BitmapDipActivity;
 import com.seachal.seacahldemos.RecyclerViewTest.RecyclerViewTestActivity;
 import com.seachal.seacahldemos.ShareGeneratePicture.ShareGeneratePictureActivity;
@@ -33,14 +35,19 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
             "TextView setText 的时候，onMessure,会被调用吗",
             "android 分享生成图片",
             "textView 带超链接",
-            "RecyclerView 多种 gride 布局"
+            "RecyclerView 多种 gride 布局",
+            "CountDownTimer 倒计时",
+            "uri"
 
     };
     private Class[] mClasses = new Class[]{BitmapDipActivity.class,
             CustomTextViewTestActivity.class,
             ShareGeneratePictureActivity.class,
             LinkTextViewActivity.class,
-            RecyclerViewTestActivity.class
+            RecyclerViewTestActivity.class,
+            CountDownTimerActivity.class,
+            URITestActivity.class
+
 
     };
 

@@ -9,6 +9,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.seachal.seacahldemos.Activity.CountDownTimerActivity;
+import com.seachal.seacahldemos.Activity.SkipToTaobaoActivity;
+import com.seachal.seacahldemos.Activity.SkipToTaobaoActivity2;
 import com.seachal.seacahldemos.Activity.URITestActivity;
 import com.seachal.seacahldemos.BitmapDip.BitmapDipActivity;
 import com.seachal.seacahldemos.RecyclerViewTest.RecyclerViewTestActivity;
@@ -37,7 +39,10 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
             "textView 带超链接",
             "RecyclerView 多种 gride 布局",
             "CountDownTimer 倒计时",
-            "uri"
+            "uri",
+            "跳转到淘宝",
+            "跳转到淘宝2"
+
 
     };
     private Class[] mClasses = new Class[]{BitmapDipActivity.class,
@@ -46,7 +51,9 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
             LinkTextViewActivity.class,
             RecyclerViewTestActivity.class,
             CountDownTimerActivity.class,
-            URITestActivity.class
+            URITestActivity.class,
+            SkipToTaobaoActivity.class,
+            SkipToTaobaoActivity2.class
 
 
     };

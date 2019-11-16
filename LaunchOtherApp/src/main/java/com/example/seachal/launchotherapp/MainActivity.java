@@ -1,8 +1,9 @@
 package com.example.seachal.launchotherapp;
 
-import android.app.Application;
 import android.content.ComponentName;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -77,6 +78,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
+
+
     //       被启动 app 的 androidmanifest 中 activity 中要指定的数据， <data 数据。
     public void startOtherAppActivity3(View view) {
         Uri uri = Uri.parse("app://my.test");
@@ -115,5 +119,117 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "可以在这里提示用户没有找到应用程序，或者是做其他的操作！", 0).show();
         }
     }
+
+
+
+
+
+
+    /**
+     * @param view
+     */
+    public void startOtherAppActivity23(View view) {
+        String packname = "com.example.seachal.launchedapp";
+        PackageManager packageManager = getPackageManager();
+        if (checkPackInfo(packname)) {
+            Intent intent = packageManager.getLaunchIntentForPackage(packname);
+            startActivity(intent);
+        } else {
+            Toast.makeText(MainActivity.this, "没有安装" + packname, 1).show();
+        }
+    }
+
+    /**
+     * @param view
+     */
+    public void startOtherAppActivity5(View view) {
+        ComponentName componetName = new ComponentName(
+                "com.example.seachal.launchedapp",  //这个是另外一个应用程序的包名
+                "com.example.seachal.launchedapp.Main5Activity");   //这个参数是要启动的Activity的全路径名
+
+        try {
+            Intent intent = new Intent();
+            intent.setComponent(componetName);
+            intent.putExtra("wangluo", "这个参数是要启动的Activity的全路径名");
+            intent.setFlags(Intent.FLAG_ACTIVITY_RETAIN_IN_RECENTS);
+            startActivity(intent);
+        } catch (Exception e) {
+            Toast.makeText(getApplicationContext(), "可以在这里提示用户没有找到应用程序，或者是做其他的操作！", 0).show();
+        }
+    }
+
+
+    /**
+     * @param view
+     */
+    public void startOtherAppActivity6(View view) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+
+//        String tbPath="https://item.taobao.com/item.htm?spm=a1z0d.6639537.1997196601.14.45d07484uw9hPZ&id=565080000925";
+ String tbPath= "http://www.baidu.com";
+        intent.setData(Uri.parse(tbPath));
+        startActivity(intent);
+    }
+
+
+
+
+    /**
+     * @param view
+     */
+    public void startOtherAppActivity61(View view) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+
+        String tbPath="https://item.taobao.com/item.htm?spm=a1z0d.6639537.1997196601.14.45d07484uw9hPZ&id=565080000925";
+
+        //        String tbPath= "http://www.baidu.com";
+//        String tbPath="http://item.taobao.com/&";
+
+        intent.setData(Uri.parse(tbPath));
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+    /**
+     * @param view
+     */
+    public void startOtherAppActivity7(View view) {
+        ComponentName componetName = new ComponentName(
+                "com.example.seachal.launchedapp",  //这个是另外一个应用程序的包名
+                "com.example.seachal.launchedapp.Main5Activity");   //这个参数是要启动的Activity的全路径名
+
+        try {
+            Intent intent = new Intent();
+            intent.setComponent(componetName);
+            intent.putExtra("wangluo", "这个参数是要启动的Activity的全路径名");
+            intent.setFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
+            startActivity(intent);
+        } catch (Exception e) {
+            Toast.makeText(getApplicationContext(), "可以在这里提示用户没有找到应用程序，或者是做其他的操作！", 0).show();
+        }
+    }
+
+
+
+
+    /**
+     * 检查包是否存在
+     *
+     * @param packname
+     * @return
+     */
+    private boolean checkPackInfo(String packname) {
+        PackageInfo packageInfo = null;
+        try {
+            packageInfo = getPackageManager().getPackageInfo(packname, 0);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return packageInfo != null;
+    }
+
+
+
+
+
 
 }

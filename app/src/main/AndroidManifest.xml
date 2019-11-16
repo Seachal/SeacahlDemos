@@ -36,6 +36,10 @@
 
         <activity android:name=".Activity.CountDownTimerActivity"/>
         <activity android:name=".Activity.URITestActivity"/>
+        <activity android:name=".Activity.SkipToTaobaoActivity"/>
+        <activity android:name=".Activity.SkipToTaobaoActivity2"/>
+
+
 
 
     </application>

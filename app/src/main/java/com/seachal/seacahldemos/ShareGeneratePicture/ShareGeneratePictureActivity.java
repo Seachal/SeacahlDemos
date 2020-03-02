@@ -1,9 +1,9 @@
 package com.seachal.seacahldemos.ShareGeneratePicture;
 
-import android.app.Activity;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -25,7 +25,7 @@ import java.io.IOException;
  * @date 2019-09-17 11:41
  * *
  */
-public class ShareGeneratePictureActivity  extends Activity {
+public class ShareGeneratePictureActivity  extends AppCompatActivity {
 
 
 

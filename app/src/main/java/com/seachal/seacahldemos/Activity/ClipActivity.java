@@ -1,8 +1,8 @@
 package com.seachal.seacahldemos.Activity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 
 /**
  * *
@@ -13,7 +13,7 @@ import android.support.annotation.Nullable;
  * @date 2019-10-30 16:25
  * *
  */
-public class ClipActivity extends Activity {
+public class ClipActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

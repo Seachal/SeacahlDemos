@@ -41,7 +41,8 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
             "CountDownTimer 倒计时",
             "uri",
             "跳转到淘宝",
-            "跳转到淘宝2"
+            "跳转到淘宝2",
+            "android 跳转栈测试"
 
 
     };
@@ -54,7 +55,6 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
             URITestActivity.class,
             SkipToTaobaoActivity.class,
             SkipToTaobaoActivity2.class
-
 
     };
 

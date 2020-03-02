@@ -1,9 +1,9 @@
 package com.seachal.seacahldemos.Activity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 
@@ -18,7 +18,7 @@ import com.seachal.seacahldemos.R;
  * @date 2019-10-23 16:10
  * *
  */
-public class CountDownTimerActivity extends Activity {
+public class CountDownTimerActivity extends AppCompatActivity {
 
     public static final String TAG = "CountDownTimerActivity";
 

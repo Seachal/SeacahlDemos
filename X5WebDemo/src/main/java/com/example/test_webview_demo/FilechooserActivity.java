@@ -1,16 +1,16 @@
 package com.example.test_webview_demo;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.example.test_webview_demo.utils.X5WebView;
 import com.tencent.smtt.sdk.ValueCallback;
 import com.tencent.smtt.sdk.WebChromeClient;
 
-public class FilechooserActivity extends Activity {
+public class FilechooserActivity extends AppCompatActivity {
 
     /**
      * 用于展示在web端<input type=text>的标签被选择之后，文件选择器的制作和生成

@@ -1,15 +1,12 @@
 package com.example.test_webview_demo;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Process;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
@@ -18,7 +15,10 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.SimpleAdapter;
 
-public class MainActivity extends Activity {
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class MainActivity extends AppCompatActivity {
 
 	public static boolean firstOpening = true;
 	private static String[] titles = null;

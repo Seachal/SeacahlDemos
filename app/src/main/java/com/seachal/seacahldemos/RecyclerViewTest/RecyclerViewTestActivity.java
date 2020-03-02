@@ -1,8 +1,8 @@
 package com.seachal.seacahldemos.RecyclerViewTest;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -24,7 +24,7 @@ import java.util.List;
  * @date 2019-09-27 16:02
  * *
  */
-public class RecyclerViewTestActivity extends Activity {
+public class RecyclerViewTestActivity extends AppCompatActivity {
 
 
     @Override

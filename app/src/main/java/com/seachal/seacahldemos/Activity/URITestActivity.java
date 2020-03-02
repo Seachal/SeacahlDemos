@@ -1,9 +1,9 @@
 package com.seachal.seacahldemos.Activity;
 
-import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.seachal.seacahldemos.R;
@@ -19,7 +19,7 @@ import java.util.List;
  * @date 2019-11-05 19:45
  * *
  */
-public class URITestActivity  extends Activity {
+public class URITestActivity  extends AppCompatActivity {
 
     public static final String tag = "URITestActivity";
 

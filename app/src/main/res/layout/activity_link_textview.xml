@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -8,11 +9,13 @@
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxLines="15" />
+        android:maxLines="15"
+        tools:text="hhh" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
+
         android:background="@color/colorAccent" />
 
     <TextView
@@ -20,20 +23,65 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autoLink="all"
-        android:maxLines="15" />
+        android:maxLines="15"
+        tools:text="hhh" />
 
     <TextView
         android:id="@+id/text2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:maxLines="15"
+        tools:text="hhh" />
+
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:maxLines="15" />
 
 
+    <!--       <TextView-->
+    <!--        android:id="@+id/tv_show"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        tools:text="hhh" />-->
+
+
+    <TextView
+        android:id="@+id/tv_my_span"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="15"
+        tools:text="hhh" />
     <!--    <TextView-->
     <!--        android:id="@+id/text1"-->
     <!--        android:layout_width="match_parent"-->
     <!--        android:layout_height="wrap_content"-->
     <!--        android:autoLink="all"-->
     <!--        android:maxLines="15" />-->
+
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:focusable="true"
+        android:clickable="true"
+        android:marqueeRepeatLimit="-1"
+        android:gravity="center"
+        android:text="TextView,TextView2,TextView3,TextView4"
+        tools:text="TextView,TextView2,TextView3,TextView4" />
+
+    <com.seachal.seacahldemos.View.MarqueeTextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:focusable="true"
+        android:marqueeRepeatLimit="-1"
+        android:text="MarqueeTextView,MarqueeTextView,MarqueeTextView,MarqueeTextView"
+        tools:text="MarqueeTextView,MarqueeTextView,MarqueeTextView,Marquee" />
 
 </LinearLayout>

@@ -1,6 +1,6 @@
 package com.seachal.seacahldemos;
 
-import android.app.Activity;
+import android.support.v7.app.AppCompatActivity;
 
 /**
  * *
@@ -11,7 +11,7 @@ import android.app.Activity;
  * @date 2019-09-27 11:19
  * *
  */
-public class ConstraintLayoutTestActivity   extends Activity {
+public class ConstraintLayoutTestActivity   extends AppCompatActivity {
 
 
 }

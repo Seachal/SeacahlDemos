@@ -1,15 +1,18 @@
 package com.seachal.seacahldemos.TextView;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
+import android.text.style.DynamicDrawableSpan;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.UnderlineSpan;
 import android.text.util.Linkify;
@@ -17,6 +20,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.seachal.seacahldemos.R;
+import com.seachal.seacahldemos.View.CustomSpan.SpannableStringUtils;
 import com.seachal.seacahldemos.customview.CustomTextViewTestActivity;
 
 /**
@@ -32,7 +36,7 @@ import com.seachal.seacahldemos.customview.CustomTextViewTestActivity;
  * @date 2019-09-25 10:33
  * *
  */
-public class LinkTextViewActivity extends Activity {
+public class LinkTextViewActivity extends AppCompatActivity {
 
 
     @Override
@@ -70,6 +74,76 @@ public class LinkTextViewActivity extends Activity {
         mTextView.setText(html);
 
 
+
+        TextView textView3 = findViewById(R.id.text3);
+//        //在textview中设置图片
+//        SpannableString spannableString5 = new SpannableString("\n设置图片，在第一个字符上设置");
+//        spannableString5.setSpan(new DynamicDrawableSpan() {
+//            @Override
+//            public Drawable getDrawable() {
+//                Drawable d = getResources().getDrawable(R.drawable.ic_launcher_background);
+//                d.setBounds(0, 0, 50, 50);
+//                return d;
+//            }
+//        }, 2, 4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+//        textView3.append(spannableString5);
+        //在textview中设置图片
+        SpannableString spannableString5 = new SpannableString("淘宝 包邮商品赶快下单吧");
+        spannableString5.setSpan(new DynamicDrawableSpan() {
+            @Override
+            public Drawable getDrawable() {
+                Drawable d = getResources().getDrawable(R.drawable.shape_mall_rectangle_tag_platform);
+                d.setBounds(0, 0, 50, 50);
+                return d;
+            }
+        }, 0, 2, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        textView3.append(spannableString5);
+
+
+
+
+//        TextView tv_show = findViewById(R.id.tv_show);
+//        SpannableStringBuilder ssb = new SpannableStringBuilder("这是一个字符串");
+//        //第一个参数是样式，第二和第三个参数是要改变的区间，最后一个参数对TextView没有用
+//        //当是EditText的时候决定是否会对两侧新输入的文字进行同样的改变
+//        //这里的设置是对两侧都不改变
+//        ssb.setSpan(new UnderlineSpan(),0,2, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+//        ssb.setSpan(new BackgroundColorSpan(Color.GREEN),0,1,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+//        ssb.setSpan(new ForegroundColorSpan(Color.RED),1,2,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+//        //获取图片
+//        Drawable d = getResources().getDrawable(R.mipmap.ic_launcher);
+//        //这行不能少 设置固有宽高
+//        d.setBounds(0, 0, d.getIntrinsicWidth(), d.getIntrinsicHeight());
+//        ImageSpan imageSpan = new ImageSpan(d);
+//        //替换一个文字为图片
+//        ssb.setSpan(imageSpan,2,3,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+//        tv_show.setText(ssb);
+//        //用超链接标记文本
+//        ssb.setSpan(new URLSpan("dsaas"), 3, 4,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+//        //斜粗体
+//        ssb.setSpan(new StyleSpan(Typeface.BOLD_ITALIC), 4, 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+//        //改变大小
+//        //这个是相对大小
+//        //ssb.setSpan(new RelativeSizeSpan(1.5f), 5, 6,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+//        //绝对大小 设置数值
+//        ssb.setSpan(new AbsoluteSizeSpan(30), 5, 6,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+//        ssb.setSpan(new StyleSpan(Typeface.ITALIC), 5, 6,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+//        //删除线标
+//        ssb.setSpan(new StrikethroughSpan(), 6, 7,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        TextView tv_my_span  = findViewById(R.id.tv_my_span);
+        SpannableStringUtils.getLabelStyleText(this, new String[]{"淘宝，包邮商品赶快下单"} , tv_my_span, R.drawable.shape_mall_rectangle_tag_platform);
+//
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                tv_my_span.invalidate();
+                tv_my_span.measure(100,100);
+                tv_my_span.setWidth(tv_my_span.getMeasuredWidth());
+            }
+        },50);
+        tv_my_span.setText("为啥没生效");
     }
 
     //设置超链接文字

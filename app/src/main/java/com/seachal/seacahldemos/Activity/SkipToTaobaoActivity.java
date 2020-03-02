@@ -1,11 +1,11 @@
 package com.seachal.seacahldemos.Activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
@@ -21,7 +21,7 @@ import com.seachal.seacahldemos.R;
  * @date 2019-11-08 16:32
  * *
  */
-public class SkipToTaobaoActivity extends Activity {
+public class SkipToTaobaoActivity extends AppCompatActivity {
 
 
     @Override

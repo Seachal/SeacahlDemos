@@ -1,9 +1,9 @@
 package com.example.test_webview_demo;
 
-import android.app.Activity;
 import android.content.res.Configuration;
 import android.graphics.PixelFormat;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.webkit.JavascriptInterface;
 import android.widget.Toast;
@@ -11,7 +11,7 @@ import android.widget.Toast;
 import com.example.test_webview_demo.utils.WebViewJavaScriptFunction;
 import com.example.test_webview_demo.utils.X5WebView;
 
-public class FullScreenActivity extends Activity {
+public class FullScreenActivity extends AppCompatActivity {
 
 	/**
 	 * 用于演示X5webview实现视频的全屏播放功能 其中注意 X5的默认全屏方式 与 android 系统的全屏方式

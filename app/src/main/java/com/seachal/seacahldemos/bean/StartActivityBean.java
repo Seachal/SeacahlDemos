@@ -1,5 +1,8 @@
 package com.seachal.seacahldemos.bean;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * *
  * *
@@ -9,7 +12,7 @@ package com.seachal.seacahldemos.bean;
  * @date 2020/3/2 11:52
  * *
  */
-public class StartActivityBean {
+public class StartActivityBean implements Parcelable {
 
     private String mTitle;
 
@@ -36,4 +39,32 @@ public class StartActivityBean {
     public void setActivityClass(Class activityClass) {
         mActivityClass = activityClass;
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.mTitle);
+        dest.writeSerializable(this.mActivityClass);
+    }
+
+    protected StartActivityBean(Parcel in) {
+        this.mTitle = in.readString();
+        this.mActivityClass = (Class) in.readSerializable();
+    }
+
+    public static final Parcelable.Creator<StartActivityBean> CREATOR = new Parcelable.Creator<StartActivityBean>() {
+        @Override
+        public StartActivityBean createFromParcel(Parcel source) {
+            return new StartActivityBean(source);
+        }
+
+        @Override
+        public StartActivityBean[] newArray(int size) {
+            return new StartActivityBean[size];
+        }
+    };
 }

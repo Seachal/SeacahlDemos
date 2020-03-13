@@ -55,12 +55,11 @@
         android:layout_height="wrap_content"
         android:maxLines="15"
         tools:text="hhh" />
-    <!--    <TextView-->
-    <!--        android:id="@+id/text1"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:autoLink="all"-->
-    <!--        android:maxLines="15"/>-->
+
+
+
+    
+
 
 
     <TextView

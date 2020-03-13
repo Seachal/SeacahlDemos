@@ -15,8 +15,9 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:background="@color/colorAccent"
 
-        android:background="@color/colorAccent" />
+        />
 
     <TextView
         android:id="@+id/text1"
@@ -45,7 +46,7 @@
     <!--        android:id="@+id/tv_show"-->
     <!--        android:layout_width="match_parent"-->
     <!--        android:layout_height="wrap_content"-->
-    <!--        tools:text="hhh" />-->
+    <!--        tools:text="hhh"/>-->
 
 
     <TextView
@@ -59,18 +60,18 @@
     <!--        android:layout_width="match_parent"-->
     <!--        android:layout_height="wrap_content"-->
     <!--        android:autoLink="all"-->
-    <!--        android:maxLines="15" />-->
+    <!--        android:maxLines="15"/>-->
 
 
     <TextView
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:ellipsize="marquee"
-        android:singleLine="true"
-        android:focusable="true"
         android:clickable="true"
-        android:marqueeRepeatLimit="-1"
+        android:ellipsize="marquee"
+        android:focusable="true"
         android:gravity="center"
+        android:marqueeRepeatLimit="-1"
+        android:singleLine="true"
         android:text="TextView,TextView2,TextView3,TextView4"
         tools:text="TextView,TextView2,TextView3,TextView4" />
 
@@ -78,9 +79,9 @@
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:ellipsize="marquee"
-        android:singleLine="true"
         android:focusable="true"
         android:marqueeRepeatLimit="-1"
+        android:singleLine="true"
         android:text="MarqueeTextView,MarqueeTextView,MarqueeTextView,MarqueeTextView"
         tools:text="MarqueeTextView,MarqueeTextView,MarqueeTextView,Marquee" />
 

@@ -47,6 +47,7 @@ public class LinkTextViewActivity extends AppCompatActivity {
 
 //         1 .
         TextView mTextView = (TextView) findViewById(R.id.text);
+
         //将TextView的显示文字设置为SpannableString
         mTextView.setText(getClickableSpan());
         //设置该句使文本的超连接起作用

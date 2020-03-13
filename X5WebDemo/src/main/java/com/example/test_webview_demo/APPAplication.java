@@ -5,6 +5,8 @@ import android.util.Log;
 
 import com.tencent.smtt.sdk.QbSdk;
 
+
+// 这是 腾讯官方的 demo
 public class APPAplication extends Application {
 
 	@Override

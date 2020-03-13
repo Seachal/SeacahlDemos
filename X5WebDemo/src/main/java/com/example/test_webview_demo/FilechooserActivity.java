@@ -26,6 +26,7 @@ public class FilechooserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.filechooser_layout);
 
+
         webView = (X5WebView) findViewById(R.id.web_filechooser);
 
         webView.setWebChromeClient(new WebChromeClient() {
